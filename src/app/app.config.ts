@@ -24,7 +24,7 @@ export const appConfig: ApplicationConfig = {
       config: {
         url: "http://localhost:8080",
         realm: "budget-management",
-        clientId: "budget-management-client"
+        clientId: "budget-management-angular-client"
       },
       initOptions: {
         onLoad: "check-sso",
