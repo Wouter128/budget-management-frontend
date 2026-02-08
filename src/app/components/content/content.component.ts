@@ -6,7 +6,7 @@ import Keycloak from 'keycloak-js';
   selector: 'app-content',
   imports: [],
   templateUrl: './content.component.html',
-  styleUrl: './content.component.scss',
+  styleUrl: './content.component.css'
 })
 export class ContentComponent implements OnInit {
   private baseUrl: string = `http://localhost:8081/budget-period`;
@@ -19,6 +19,10 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMessage();
+  }
+
+  get displayMessage() {
+    return this.message;
   }
 
   getMessage(): void {
