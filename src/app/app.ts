@@ -3,10 +3,11 @@ import {MatSidenav, MatSidenavContainer, MatSidenavContent} from '@angular/mater
 import {RouterOutlet} from '@angular/router';
 import {SideNavComponent} from './components/core/side-nav/side-nav.component';
 import {HeaderComponent} from './components/core/header/header.component';
+import {FooterComponent} from './components/core/footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  imports: [MatSidenav, MatSidenavContainer, MatSidenavContent, RouterOutlet, SideNavComponent, HeaderComponent],
+  imports: [MatSidenav, MatSidenavContainer, MatSidenavContent, RouterOutlet, SideNavComponent, HeaderComponent, FooterComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

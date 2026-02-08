@@ -15,6 +15,11 @@ html {
     typography: Roboto,
     density: 0,
   ));
+
+  @include mat.list-overrides((
+    list-item-hover-state-layer-color: var(--mat-sys-primary),
+    list-item-focus-state-layer-color: var(--mat-sys-primary),
+  ));
 }
 
 body {
