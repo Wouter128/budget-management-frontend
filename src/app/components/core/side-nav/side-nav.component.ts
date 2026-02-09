@@ -1,13 +1,15 @@
 import {Component} from '@angular/core';
-import {MatListItem, MatNavList} from '@angular/material/list';
-import {RouterLink} from '@angular/router';
+import {MatDivider, MatListItem, MatNavList} from '@angular/material/list';
+import {RouterLink, RouterLinkActive} from '@angular/router';
 
 @Component({
   selector: 'app-side-nav',
   imports: [
     MatNavList,
     RouterLink,
-    MatListItem
+    MatListItem,
+    MatDivider,
+    RouterLinkActive
   ],
   templateUrl: './side-nav.component.html',
   styleUrl: './side-nav.component.scss',

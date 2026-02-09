@@ -1,1 +1,9 @@
-<p>categories works!</p>
+<app-title [title]="'Categories'" [subtitle]="'Here you can add new Categories or view existing Categories.'"/>
+
+<button matButton="filled" routerLink="/create-category">New Category</button>
+
+@for (category of categories; track category.name) {
+  <p>{{ category.name }} - {{ category.description }}</p>
+  <p>Monthly limit: {{ category.monthlyLimit.amount }} {{ category.monthlyLimit.currency }}</p>
+  <hr>
+}

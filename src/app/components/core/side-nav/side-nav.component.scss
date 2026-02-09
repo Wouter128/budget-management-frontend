@@ -1,0 +1,14 @@
+a.mat-mdc-list-item {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  transition: background 200ms ease, border-color 200ms ease;
+}
+
+.mat-mdc-list-item.mdc-list-item--activated {
+  border-left-color: var(--mat-sys-primary);
+  border-right-color: var(--mat-sys-primary);
+}
+
+.mdc-list {
+  margin-right: 50px;
+}

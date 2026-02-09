@@ -1,8 +1,13 @@
 import { Component } from '@angular/core';
+import {TitleComponent} from '../../common/title/title.component';
+import {MatButton} from '@angular/material/button';
 
 @Component({
   selector: 'app-transactions',
-  imports: [],
+  imports: [
+    TitleComponent,
+    MatButton
+  ],
   templateUrl: './transactions.component.html',
   styleUrl: './transactions.component.scss',
 })

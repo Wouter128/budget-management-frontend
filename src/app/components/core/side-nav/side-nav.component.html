@@ -1,6 +1,37 @@
 <mat-nav-list>
-  <a mat-list-item routerLink="/dashboard">Dashboard</a>
-  <a mat-list-item routerLink="/budget-periods">Budget Periods</a>
-  <a mat-list-item routerLink="/transactions">Transactions</a>
-  <a mat-list-item routerLink="/categories">Categories</a>
+  <a mat-list-item
+     disableRipple
+     routerLink="/dashboard"
+     routerLinkActive
+     #rla1="routerLinkActive"
+     [activated]="rla1.isActive">Dashboard</a>
+
+  <a mat-list-item
+     disableRipple
+     routerLink="/budget-periods"
+     routerLinkActive
+     #rla2="routerLinkActive"
+     [activated]="rla2.isActive">Budget Periods</a>
+
+  <a mat-list-item
+     disableRipple
+     routerLink="/transactions"
+     routerLinkActive
+     #rla3="routerLinkActive"
+     [activated]="rla3.isActive">Transactions</a>
+
+  <a mat-list-item
+     disableRipple
+     routerLink="/categories"
+     routerLinkActive
+     #rla4="routerLinkActive"
+     [activated]="rla4.isActive">Categories</a>
+
+  <mat-divider></mat-divider>
+
+  <a mat-list-item disableRipple
+     routerLink="/login"
+     routerLinkActive
+     #rla5="routerLinkActive"
+     [activated]="rla5.isActive">Login</a>
 </mat-nav-list>

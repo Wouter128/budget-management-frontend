@@ -1,0 +1,17 @@
+<app-title [title]="'Create new Category'" [subtitle]="'Here you can create a new Category.'" />
+
+<form class="category-form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Description</mat-label>
+    <textarea matInput formControlName="description"></textarea>
+  </mat-form-field>
+
+  <div class="button-container">
+    <button matButton="filled">Create</button>
+    <button matButton="outlined" routerLink="/categories">Go back</button>
+  </div>
+</form>

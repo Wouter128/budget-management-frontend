@@ -1,19 +1,21 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BudgetPeriodService} from '../../../services/budget-period.service';
 import {BudgetPeriod} from '../../../model/budgetPeriod';
-import Keycloak from 'keycloak-js';
+import {MatButton} from '@angular/material/button';
+import {TitleComponent} from '../../common/title/title.component';
 
 @Component({
   selector: 'app-budget-periods',
-  imports: [],
+  imports: [
+    MatButton,
+    TitleComponent
+  ],
   templateUrl: './budget-periods.component.html',
   styleUrl: './budget-periods.component.scss',
 })
 export class BudgetPeriodsComponent implements OnInit {
 
   public budgetPeriod: BudgetPeriod | undefined;
-
-  private readonly keycloak = inject(Keycloak);
 
   constructor(private budgetPeriodService: BudgetPeriodService) {
   }
@@ -27,9 +29,5 @@ export class BudgetPeriodsComponent implements OnInit {
       .subscribe(result => {
         this.budgetPeriod = result;
       })
-  }
-
-  login(): void {
-    this.keycloak.login();
   }
 }
