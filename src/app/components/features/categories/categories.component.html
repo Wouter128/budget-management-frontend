@@ -3,7 +3,14 @@
 <button matButton="filled" routerLink="/create-category">New Category</button>
 
 @for (category of categories; track category.name) {
-  <p>{{ category.name }} - {{ category.description }}</p>
-  <p>Monthly limit: {{ category.monthlyLimit.amount }} {{ category.monthlyLimit.currency }}</p>
+  <div class="category-container">
+    <div class="category-content">
+      <p>{{ category.name }} - {{ category.description }}</p>
+      <p>Monthly limit: {{ category.monthlyLimit.amount }} {{ category.monthlyLimit.currency }}</p>
+    </div>
+    <div class="button-content">
+      <button matButton="elevated">Edit</button>
+    </div>
+  </div>
   <hr>
 }
