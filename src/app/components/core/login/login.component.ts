@@ -1,11 +1,13 @@
 import {Component, inject} from '@angular/core';
 import Keycloak from 'keycloak-js';
 import {MatButton} from '@angular/material/button';
+import {TitleComponent} from '../../common/title/title.component';
 
 @Component({
   selector: 'app-login',
   imports: [
-    MatButton
+    MatButton,
+    TitleComponent
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',

@@ -1,1 +1,18 @@
-<app-title [title]="'Dashboard'" [subtitle]="'Dashboard overview'" />
+<app-title [title]="'Dashboard'" [subtitle]="'Dashboard overview'"/>
+
+@if (isAuthenticated) {
+  <p>Hello {{ username }}</p>
+}
+
+<div class="card-container">
+  <div class="card">
+    <div class="card-header">Year: {{ budgetPeriod?.year }} - Month: {{ budgetPeriod?.month }}</div>
+    <div class="card-content">{{ budgetPeriod?.plannedAmount?.amount }} {{ budgetPeriod?.plannedAmount?.currency }}
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">Header</div>
+    <div class="card-content">Content</div>
+  </div>
+</div>
