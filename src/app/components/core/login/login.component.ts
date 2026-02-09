@@ -1,7 +1,7 @@
-import {Component, inject} from '@angular/core';
-import Keycloak from 'keycloak-js';
+import {Component} from '@angular/core';
 import {MatButton} from '@angular/material/button';
 import {TitleComponent} from '../../common/title/title.component';
+import {AuthService} from '../../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -14,13 +14,14 @@ import {TitleComponent} from '../../common/title/title.component';
 })
 export class LoginComponent {
 
-  private readonly keycloak = inject(Keycloak);
+  constructor(private authService: AuthService) {
+  }
 
   login(): void {
-    this.keycloak.login();
+    this.authService.login();
   }
 
   logout(): void {
-    this.keycloak.logout({redirectUri: window.location.origin});
+    this.authService.logout();
   }
 }

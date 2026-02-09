@@ -3,6 +3,7 @@ import {TitleComponent} from '../../common/title/title.component';
 import {BudgetPeriod} from '../../../model/budgetPeriod';
 import {BudgetPeriodService} from '../../../services/budget-period.service';
 import Keycloak from 'keycloak-js';
+import {AuthService} from '../../../services/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,31 +15,23 @@ import Keycloak from 'keycloak-js';
 })
 export class DashboardComponent implements OnInit {
 
-  private readonly keycloak = inject(Keycloak);
-  public isAuthenticated: boolean = false;
   public username: string | undefined;
+  public isAuthenticated: boolean = false;
   public budgetPeriod: BudgetPeriod | undefined;
 
-  constructor(private budgetPeriodService: BudgetPeriodService) {
+  constructor(private budgetPeriodService: BudgetPeriodService,
+              private authService: AuthService) {
   }
 
   ngOnInit(): void {
-    this.loadKeycloakUsername()
+    this.isAuthenticated = this.authService.isAuthenticated();
+    this.authService.getUsername().then(name => this.username = name);
     this.getBudgetPeriod();
-    this.checkAuthenticated();
   }
 
   getBudgetPeriod(): void {
     this.budgetPeriodService.getBudgetPeriod().subscribe(result => {
       this.budgetPeriod = result;
     });
-  }
-
-  loadKeycloakUsername(): void {
-    this.keycloak.loadUserProfile().then(result => this.username = result.firstName + " " + result.lastName);
-  }
-
-  checkAuthenticated(): void {
-    this.isAuthenticated = this.keycloak.authenticated
   }
 }
