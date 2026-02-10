@@ -1,4 +1,4 @@
-<app-title [title]="'Create new Category'" [subtitle]="'Here you can create a new Category.'" />
+<app-title [title]="'Edit Category'" [subtitle]="'Here you can edit / update a Category.'" />
 
 <form class="category-form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
   <mat-form-field appearance="outline">
@@ -11,7 +11,7 @@
   </mat-form-field>
 
   <div class="button-container">
-    <button matButton="filled" type="submit">Create</button>
+    <button matButton="filled" type="submit">Edit</button>
     <button matButton="outlined" routerLink="/categories">Go back</button>
   </div>
 </form>

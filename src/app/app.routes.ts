@@ -6,6 +6,7 @@ import {CategoriesComponent} from './components/features/categories/categories.c
 import {LoginComponent} from './components/core/login/login.component';
 import {CreateCategoryComponent} from './components/features/categories/create-category/create-category.component';
 import {AuthGuard} from './guards/auth.guard';
+import {EditCategoryComponent} from './components/features/categories/edit-category/edit-category.component';
 
 export const routes: Routes = [
   {
@@ -36,6 +37,11 @@ export const routes: Routes = [
   {
     path: 'create-category',
     component: CreateCategoryComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'edit-category/:id',
+    component: EditCategoryComponent,
     canActivate: [AuthGuard]
   },
   {

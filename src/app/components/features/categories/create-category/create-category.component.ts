@@ -42,15 +42,15 @@ export class CreateCategoryComponent implements OnInit {
   }
 
   createCategory(): void {
-    this.categoryService.createCategory(this.formGroup?.value).subscribe({
+    this.categoryService.createCategory(this.formGroup.value).subscribe({
       next: () => {
         console.log("Category created");
-        this.formGroup?.reset();
+        this.formGroup.reset();
         this.router.navigate(['/categories']).then();
       },
       error: (response) => {
         console.log(response);
-        this.formGroup?.enable();
+        this.formGroup.enable();
       }
     })
   }

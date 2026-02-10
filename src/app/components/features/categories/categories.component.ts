@@ -60,6 +60,8 @@ export class CategoriesComponent implements OnInit {
   }
 
   private deleteCategory(id: string): void {
-    this.categoryService.deleteCategory(id).subscribe();
+    this.categoryService.deleteCategory(id).subscribe(() => {
+      this.getCategories();
+    });
   }
 }
