@@ -5,31 +5,38 @@ import {TransactionsComponent} from './components/features/transactions/transact
 import {CategoriesComponent} from './components/features/categories/categories.component';
 import {LoginComponent} from './components/core/login/login.component';
 import {CreateCategoryComponent} from './components/features/categories/create-category/create-category.component';
+import {AuthGuard} from './guards/auth.guard';
 
 export const routes: Routes = [
   {
     path: '',
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'budget-periods',
-    component: BudgetPeriodsComponent
+    component: BudgetPeriodsComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'transactions',
-    component: TransactionsComponent
+    component: TransactionsComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'categories',
-    component: CategoriesComponent
+    component: CategoriesComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'create-category',
-    component: CreateCategoryComponent
+    component: CreateCategoryComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'login',
