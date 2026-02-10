@@ -15,10 +15,14 @@ export class CategoryService {
   }
 
   createCategory(category: Category): Observable<Category> {
-    return this.http.post<Category>(this.url + "/create", category);
+    return this.http.post<Category>(`${this.url}/create`, category);
   }
 
   getCategories(): Observable<Category[]> {
     return this.http.get<Category[]>(this.url);
+  }
+
+  deleteCategory(id: string): Observable<void> {
+    return this.http.delete<void>(`${this.url}/${id}`);
   }
 }

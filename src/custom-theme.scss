@@ -6,15 +6,18 @@
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
 
+@include mat.core;
+
 html {
   @include mat.theme((
     color: (
       primary: mat.$azure-palette,
       tertiary: mat.$blue-palette,
     ),
-    typography: Roboto,
     density: 0,
   ));
+
+  --mat-sys-font-family: Inter, system-ui, sans-serif;
 
   @include mat.list-overrides((
     list-item-hover-state-layer-color: var(--mat-sys-primary),
