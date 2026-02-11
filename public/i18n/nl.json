@@ -7,9 +7,9 @@
     "title": "Budgetbeheer Applicatie",
     "navbar": {
       "dashboard": "Dashboard",
-      "budget-period": "Budget Periode",
-      "transaction": "Transactie",
-      "category": "Categorie"
+      "budget-period": "Budget Periodes",
+      "transaction": "Transacties",
+      "category": "Categorieën"
     },
     "button": {
       "create": "Aanmaken",
@@ -29,6 +29,11 @@
     "transaction": {
       "title": "Transacties",
       "subtitle": "Hier kan je een nieuwe Transactie toevoegen, of je vorige Transacties bekijken.",
+      "date": "Datum",
+      "amount": "Bedrag",
+      "type": "Type",
+      "category": "Categorie",
+      "description": "Description",
       "create": {
         "title": "Nieuwe Transactie toevoegen",
         "subtitle": "Hier kan je een nieuwe Transactie toevoegen.",
@@ -36,7 +41,8 @@
         "form-currency": "Munteenheid",
         "form-type": "Type",
         "form-category": "Categorie",
-        "form-description": "Beschrijving"
+        "form-description": "Beschrijving",
+        "form-date": "Kies een datum"
       }
     },
     "category": {

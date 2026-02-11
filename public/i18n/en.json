@@ -7,9 +7,9 @@
     "title": "Budget Management Application",
     "navbar": {
       "dashboard": "Dashboard",
-      "budget-period": "Budget Period",
-      "transaction": "Transaction",
-      "category": "Category"
+      "budget-period": "Budget Periods",
+      "transaction": "Transactions",
+      "category": "Categories"
     },
     "button": {
       "create": "Create",
@@ -29,6 +29,11 @@
     "transaction": {
       "title": "Transactions",
       "subtitle": "Here you can add a new Transaction or view your previous Transactions.",
+      "date": "Date",
+      "amount": "Amount",
+      "type": "Type",
+      "category": "Category",
+      "description": "Description",
       "create": {
         "title": "Create new Transaction",
         "subtitle": "Here you can create a new Transaction.",
@@ -36,7 +41,8 @@
         "form-currency": "Currency",
         "form-type": "Type",
         "form-category": "Category",
-        "form-description": "Description"
+        "form-description": "Description",
+        "form-date": "Choose a date"
       }
     },
     "category": {

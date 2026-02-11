@@ -4,6 +4,9 @@
   "newProjectRoot": "projects",
   "projects": {
     "budget-management-frontend": {
+      "i18n": {
+        "sourceLocale": "nl-BE"
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {

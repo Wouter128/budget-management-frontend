@@ -11,6 +11,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {provideNativeDateAdapter} from '@angular/material/core';
 import {DatePipe} from '@angular/common';
+import {CategoryService} from '../../../../services/category.service';
+import {Category} from '../../../../model/category';
 
 @Component({
   selector: 'app-create-transaction',
@@ -35,8 +37,10 @@ import {DatePipe} from '@angular/common';
 export class CreateTransactionComponent implements OnInit {
 
   formGroup!: FormGroup;
+  categories!: Category[];
 
   constructor(private transactionService: TransactionService,
+              private categoryService: CategoryService,
               private formBuilder: FormBuilder,
               private router: Router,
               private datePipe: DatePipe) {
@@ -44,7 +48,6 @@ export class CreateTransactionComponent implements OnInit {
 
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
-      id: '',
       date: '',
       amount: this.formBuilder.group({
         amount: '',
@@ -54,6 +57,14 @@ export class CreateTransactionComponent implements OnInit {
       categoryId: '',
       type: ''
     })
+
+    this.populateCategories();
+  }
+
+  private populateCategories(): void {
+    this.categoryService.getCategories().subscribe(result => {
+      this.categories = result;
+    });
   }
 
   onSubmit(): void {
