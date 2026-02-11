@@ -4,8 +4,17 @@ app-header {
   margin-bottom: 20px;
 }
 
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.app-container {
+  flex: 1 1 auto;
+}
+
 mat-sidenav-content {
-  //background-color: var(--mat-sys-primary-container);
   padding: 0 20px;
   margin-right: 20px;
 }

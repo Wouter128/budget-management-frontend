@@ -37,13 +37,14 @@ export class EditCategoryComponent implements OnInit {
   ngOnInit(): void {
     this.categoryId = this.route.snapshot.paramMap.get('id')!;
 
-    this.categoryService.getCategory(this.categoryId).subscribe(cat => {
-      this.category = cat;
-    });
-
     this.formGroup = this.formBuilder.group({
       name: '',
       description: ''
+    });
+
+    this.categoryService.getCategory(this.categoryId).subscribe(cat => {
+      this.category = cat;
+      this.formGroup.patchValue(this.category);
     });
   }
 
@@ -54,7 +55,6 @@ export class EditCategoryComponent implements OnInit {
   private updateCategory(id: string) {
     this.categoryService.updateCategory(id, this.formGroup.value).subscribe({
       next: () => {
-        console.log("Category updated");
         this.formGroup.reset();
         this.router.navigate(['/categories']).then();
       },
