@@ -1,8 +1,8 @@
 import {Money} from './money';
-import {Month} from './month';
 
 export interface BudgetPeriod {
+  id: string;
   year: number;
-  month: Month;
+  month: string;
   plannedAmount: Money;
 }

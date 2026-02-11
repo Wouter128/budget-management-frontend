@@ -17,21 +17,12 @@ export class DashboardComponent implements OnInit {
 
   public username: string | undefined;
   public isAuthenticated: boolean = false;
-  public budgetPeriod: BudgetPeriod | undefined;
 
-  constructor(private budgetPeriodService: BudgetPeriodService,
-              private authService: AuthService) {
+  constructor(private authService: AuthService) {
   }
 
   ngOnInit(): void {
     this.isAuthenticated = this.authService.isAuthenticated();
     this.authService.getUsername().then(name => this.username = name);
-    this.getBudgetPeriod();
-  }
-
-  getBudgetPeriod(): void {
-    this.budgetPeriodService.getBudgetPeriod().subscribe(result => {
-      this.budgetPeriod = result;
-    });
   }
 }

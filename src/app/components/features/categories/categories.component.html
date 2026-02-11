@@ -13,7 +13,7 @@
         <div class="description">Description:<br/>{{ category.description }}</div>
       </div>
       <div class="actions">
-        <button matButton="filled" [routerLink]="['/edit-category', category.id]">Edit</button>
+        <button matButton="text" [routerLink]="['/edit-category', category.id]">Edit</button>
         <button matButton="filled"
                 class="danger-color"
                 (click)="openDialog('Oms', '0ms', 'Category', category.name, category.id)">Remove</button>

@@ -17,16 +17,13 @@
 .category-header {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  align-items: center;
 }
 
 .actions {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
-}
-
-.info {
-  align-content: center;
 }
 
 .mdc-button.danger-color {

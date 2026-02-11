@@ -15,19 +15,19 @@ import {TitleComponent} from '../../common/title/title.component';
 })
 export class BudgetPeriodsComponent implements OnInit {
 
-  public budgetPeriod: BudgetPeriod | undefined;
+  public budgetPeriodList: BudgetPeriod[] | undefined;
 
   constructor(private budgetPeriodService: BudgetPeriodService) {
   }
 
   ngOnInit(): void {
-    this.getBudgetPeriod();
+    this.getBudgetPeriodList();
   }
 
-  getBudgetPeriod(): void {
-    this.budgetPeriodService.getBudgetPeriod()
+  getBudgetPeriodList(): void {
+    this.budgetPeriodService.getBudgetPeriodList()
       .subscribe(result => {
-        this.budgetPeriod = result;
+        this.budgetPeriodList = result;
       })
   }
 }

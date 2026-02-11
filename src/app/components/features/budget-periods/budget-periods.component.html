@@ -1,8 +1,17 @@
-<app-title [title]="'Budget Period'" [subtitle]="'Here you can add a new Budget Period or view your current Budget Period.'" />
+<app-title [title]="'Budget Period'"
+           [subtitle]="'Here you can add a new Budget Period or view your current Budget Period.'"/>
 
 <button matButton="filled">New Budget Period</button>
 
-<p>Year: {{budgetPeriod?.year}}</p>
-<p>Month: {{budgetPeriod?.month}}</p>
-<p>Amount: {{budgetPeriod?.plannedAmount?.amount}}</p>
-<p>Currency: {{budgetPeriod?.plannedAmount?.currency}}</p>
+<div class="budget-period-container">
+  @for (budgetPeriod of budgetPeriodList; track budgetPeriod.id) {
+    <div class="budget-period">
+      <div><h3>{{ budgetPeriod.year }} {{ budgetPeriod.month }}</h3></div>
+      <div class="align-right">{{ budgetPeriod.plannedAmount.currency }} {{ budgetPeriod.plannedAmount.amount }}</div>
+      <div class="actions">
+        <button matButton="text">View details</button>
+        <button matButton="text">Edit</button>
+      </div>
+    </div>
+  }
+</div>
