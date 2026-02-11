@@ -28,11 +28,22 @@
     },
     "transaction": {
       "title": "Transactions",
-      "subtitle": "Here you can add a new Transaction or view your previous Transactions."
+      "subtitle": "Here you can add a new Transaction or view your previous Transactions.",
+      "create": {
+        "title": "Create new Transaction",
+        "subtitle": "Here you can create a new Transaction.",
+        "form-amount": "Amount",
+        "form-currency": "Currency",
+        "form-type": "Type",
+        "form-category": "Category",
+        "form-description": "Description"
+      }
     },
     "category": {
       "title": "Categories",
       "subtitle": "Here you can add new Categories or view existing Categories.",
+      "monthly-limit": "Monthly limit",
+      "description": "Description",
       "create": {
         "title": "Create new Category",
         "subtitle": "Here you can create a new Category.",

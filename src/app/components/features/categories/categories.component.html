@@ -9,10 +9,11 @@
       <div>
         <div class="category-header">
           <div class="title"><h3>{{ category.name }}</h3></div>
-          <div class="info">Monthly limit:<br/>{{ category.monthlyLimit.amount }} {{ category.monthlyLimit.currency }}
+          <div class="info">{{ 'app.category.monthly-limit' | translate }}
+            :<br/>{{ category.monthlyLimit.amount }} {{ category.monthlyLimit.currency }}
           </div>
         </div>
-        <div class="description">Description:<br/>{{ category.description }}</div>
+        <div class="description">{{ 'app.category.description' | translate }}:<br/>{{ category.description }}</div>
       </div>
       <div class="actions">
         <button matButton="text" [routerLink]="['/edit-category', category.id]">{{ 'app.button.edit' | translate }}

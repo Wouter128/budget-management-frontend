@@ -28,14 +28,25 @@
     },
     "transaction": {
       "title": "Transacties",
-      "subtitle": "Hier kan je een nieuwe Transactie toevoegen, of je vorige Transacties bekijken."
+      "subtitle": "Hier kan je een nieuwe Transactie toevoegen, of je vorige Transacties bekijken.",
+      "create": {
+        "title": "Nieuwe Transactie toevoegen",
+        "subtitle": "Hier kan je een nieuwe Transactie toevoegen.",
+        "form-amount": "Bedrag",
+        "form-currency": "Munteenheid",
+        "form-type": "Type",
+        "form-category": "Categorie",
+        "form-description": "Beschrijving"
+      }
     },
     "category": {
       "title": "Categorieën",
       "subtitle": "Hier kan je een nieuwe Categorie toevoegen, of je bestaande Categorieën bekijken.",
+      "monthly-limit": "Maandelijkse limiet",
+      "description": "Beschrijving",
       "create": {
-        "title": "Nieuwe Categorie aanmaken",
-        "subtitle": "Hier kan je een nieuwe Categorie aanmaken.",
+        "title": "Nieuwe Categorie toevoegen",
+        "subtitle": "Hier kan je een nieuwe Categorie toevoegen.",
         "form-name": "Naam",
         "form-description": "Beschrijving"
       },

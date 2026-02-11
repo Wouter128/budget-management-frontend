@@ -1,0 +1,55 @@
+<app-title [title]="'app.transaction.create.title' | translate"
+           [subtitle]="'app.transaction.create.subtitle' | translate"/>
+
+<form class="transaction-form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <div class="form-grid">
+    <div formGroupName="amount" class="amount-group">
+      <mat-form-field appearance="outline">
+        <mat-label>{{ 'app.transaction.create.form-amount' | translate }}</mat-label>
+        <input matInput formControlName="amount">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>{{ 'app.transaction.create.form-currency' | translate }}</mat-label>
+        <mat-select formControlName="currency">
+          <mat-option value="EUR">EUR</mat-option>
+          <mat-option value="USD">USD</mat-option>
+          <mat-option value="GBP">GBP</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'app.transaction.create.form-type' | translate }}</mat-label>
+      <mat-select formControlName="type">
+        <mat-option value="EXPENSE">EXPENSE</mat-option>
+        <mat-option value="INCOME">INCOME</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'app.transaction.create.form-category' | translate }}</mat-label>
+      <mat-select formControlName="categoryId">
+        <mat-option value="null">First category</mat-option>
+        <mat-option value="null">Second category</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="date">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'app.transaction.create.form-description' | translate }}</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+  </div>
+
+  <div class="button-container">
+    <button matButton="filled" type="submit">{{ 'app.button.create' | translate }}</button>
+    <button matButton="outlined" type="button" routerLink="/categories">{{ 'app.button.back' | translate }}</button>
+  </div>
+</form>

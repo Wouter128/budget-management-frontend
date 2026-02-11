@@ -3,8 +3,8 @@ import {CategoryService} from '../../../../services/category.service';
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ActivatedRoute, Router, RouterLink} from '@angular/router';
 import {MatButton} from '@angular/material/button';
-import {MatFormField} from '@angular/material/form-field';
-import {MatInput, MatLabel} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 import {TitleComponent} from '../../../common/title/title.component';
 import {TranslatePipe} from '@ngx-translate/core';
 
@@ -13,9 +13,8 @@ import {TranslatePipe} from '@ngx-translate/core';
   imports: [
     FormsModule,
     MatButton,
-    MatFormField,
-    MatInput,
-    MatLabel,
+    MatFormFieldModule,
+    MatInputModule,
     ReactiveFormsModule,
     RouterLink,
     TitleComponent,

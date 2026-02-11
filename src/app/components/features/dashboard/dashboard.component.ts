@@ -34,5 +34,6 @@ export class DashboardComponent implements OnInit {
 
   changeLang(lang: string) {
     this.translate.use(lang);
+    localStorage.setItem("app-lang", lang);
   }
 }

@@ -7,6 +7,9 @@ import {LoginComponent} from './components/core/login/login.component';
 import {CreateCategoryComponent} from './components/features/categories/create-category/create-category.component';
 import {AuthGuard} from './guards/auth.guard';
 import {EditCategoryComponent} from './components/features/categories/edit-category/edit-category.component';
+import {
+  CreateTransactionComponent
+} from './components/features/transactions/create-transaction/create-transaction.component';
 
 export const routes: Routes = [
   {
@@ -27,6 +30,11 @@ export const routes: Routes = [
   {
     path: 'transactions',
     component: TransactionsComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'create-transaction',
+    component: CreateTransactionComponent,
     canActivate: [AuthGuard]
   },
   {
