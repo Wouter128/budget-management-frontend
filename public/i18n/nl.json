@@ -1,0 +1,64 @@
+{
+  "app": {
+    "language": {
+      "en": "Engels",
+      "nl": "Nederlands"
+    },
+    "title": "Budgetbeheer Applicatie",
+    "navbar": {
+      "dashboard": "Dashboard",
+      "budget-period": "Budget Periode",
+      "transaction": "Transactie",
+      "category": "Categorie"
+    },
+    "button": {
+      "create": "Aanmaken",
+      "edit": "Wijzigen",
+      "remove": "Verwijderen",
+      "view-details": "Details bekijken",
+      "back": "Terugkeren"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "Overzicht"
+    },
+    "budget-period": {
+      "title": "Budget Periode",
+      "subtitle": "Hier kan je een nieuw Budget Periode toevoegen, of je huidige Budget Periode bekijken."
+    },
+    "transaction": {
+      "title": "Transacties",
+      "subtitle": "Hier kan je een nieuwe Transactie toevoegen, of je vorige Transacties bekijken."
+    },
+    "category": {
+      "title": "Categorieën",
+      "subtitle": "Hier kan je een nieuwe Categorie toevoegen, of je bestaande Categorieën bekijken.",
+      "create": {
+        "title": "Nieuwe Categorie aanmaken",
+        "subtitle": "Hier kan je een nieuwe Categorie aanmaken.",
+        "form-name": "Naam",
+        "form-description": "Beschrijving"
+      },
+      "edit": {
+        "title": "Categorie wijzigen",
+        "subtitle": "Hier kan je een Categorie wijzigen / updaten.",
+        "form-name": "Naam",
+        "form-description": "Beschrijving"
+      }
+    }
+  },
+  "month": {
+    "JANUARY": "januari",
+    "FEBRUARY": "februari",
+    "MARCH": "maart",
+    "APRIL": "april",
+    "MAY": "mei",
+    "JUNE": "juni",
+    "JULY": "juli",
+    "AUGUST": "augustus",
+    "SEPTEMBER": "september",
+    "OCTOBER": "oktober",
+    "NOVEMBER": "november",
+    "DECEMBER": "december"
+  }
+}

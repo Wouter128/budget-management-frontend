@@ -6,13 +6,15 @@ import {CategoryService} from '../../../services/category.service';
 import {Category} from '../../../model/category';
 import {MatDialog} from '@angular/material/dialog';
 import {ConfirmDialogComponent} from '../../common/confirm-dialog/confirm-dialog.component';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-categories',
   imports: [
     TitleComponent,
     MatButton,
-    RouterLink
+    RouterLink,
+    TranslatePipe
   ],
   templateUrl: './categories.component.html',
   styleUrl: './categories.component.scss',

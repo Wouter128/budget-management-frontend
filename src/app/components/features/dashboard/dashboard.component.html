@@ -1,17 +1,8 @@
-<app-title [title]="'Dashboard'" [subtitle]="'Dashboard overview'"/>
+<app-title [title]="'app.dashboard.title' | translate" [subtitle]="'app.dashboard.subtitle' | translate"/>
 
 @if (isAuthenticated) {
   <p>Hello {{ username }}</p>
 }
 
-<div class="card-container">
-  <div class="card">
-    <div class="card-header">Header</div>
-    <div class="card-content">Content</div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">Header</div>
-    <div class="card-content">Content</div>
-  </div>
-</div>
+<button matButton="filled" type="button" (click)="changeLang('en')">{{ 'app.language.en' | translate }}</button>
+<button matButton="filled" type="button" (click)="changeLang('nl')">{{ 'app.language.nl' | translate }}</button>

@@ -1,6 +1,7 @@
-<app-title [title]="'Categories'" [subtitle]="'Here you can add new Categories or view existing Categories.'"/>
+<app-title [title]="'app.category.title' | translate"
+           [subtitle]="'app.category.subtitle' | translate"/>
 
-<button matButton="filled" routerLink="/create-category">New Category</button>
+<button matButton="filled" routerLink="/create-category">{{ 'app.button.create' | translate }}</button>
 
 <div class="categories-container">
   @for (category of categories; track category.id) {
@@ -8,15 +9,18 @@
       <div>
         <div class="category-header">
           <div class="title"><h3>{{ category.name }}</h3></div>
-          <div class="info">Monthly limit:<br/>{{ category.monthlyLimit.amount }} {{ category.monthlyLimit.currency }}</div>
+          <div class="info">Monthly limit:<br/>{{ category.monthlyLimit.amount }} {{ category.monthlyLimit.currency }}
+          </div>
         </div>
         <div class="description">Description:<br/>{{ category.description }}</div>
       </div>
       <div class="actions">
-        <button matButton="text" [routerLink]="['/edit-category', category.id]">Edit</button>
+        <button matButton="text" [routerLink]="['/edit-category', category.id]">{{ 'app.button.edit' | translate }}
+        </button>
         <button matButton="filled"
                 class="danger-color"
-                (click)="openDialog('Oms', '0ms', 'Category', category.name, category.id)">Remove</button>
+                (click)="openDialog('Oms', '0ms', 'Category', category.name, category.id)">{{ 'app.button.remove' | translate }}
+        </button>
       </div>
     </div>
   }

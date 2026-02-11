@@ -6,6 +6,7 @@ import {MatButton} from '@angular/material/button';
 import {MatFormField} from '@angular/material/form-field';
 import {MatInput, MatLabel} from '@angular/material/input';
 import {TitleComponent} from '../../../common/title/title.component';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-edit-category',
@@ -17,7 +18,8 @@ import {TitleComponent} from '../../../common/title/title.component';
     MatLabel,
     ReactiveFormsModule,
     RouterLink,
-    TitleComponent
+    TitleComponent,
+    TranslatePipe
   ],
   templateUrl: './edit-category.component.html',
   styleUrl: './edit-category.component.scss',

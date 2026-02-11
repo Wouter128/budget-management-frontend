@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {MatDivider, MatListItem, MatNavList} from '@angular/material/list';
 import {RouterLink, RouterLinkActive} from '@angular/router';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-side-nav',
@@ -9,7 +10,8 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
     RouterLink,
     MatListItem,
     MatDivider,
-    RouterLinkActive
+    RouterLinkActive,
+    TranslatePipe
   ],
   templateUrl: './side-nav.component.html',
   styleUrl: './side-nav.component.scss',

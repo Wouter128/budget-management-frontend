@@ -1,0 +1,64 @@
+{
+  "app": {
+    "language": {
+      "en": "English",
+      "nl": "Dutch"
+    },
+    "title": "Budget Management Application",
+    "navbar": {
+      "dashboard": "Dashboard",
+      "budget-period": "Budget Period",
+      "transaction": "Transaction",
+      "category": "Category"
+    },
+    "button": {
+      "create": "Create",
+      "edit": "Edit",
+      "remove": "Remove",
+      "view-details": "View details",
+      "back": "Go back"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "Overview"
+    },
+    "budget-period": {
+      "title": "Budget Period",
+      "subtitle": "Here you can add a new Budget Period or view your current Budget Period."
+    },
+    "transaction": {
+      "title": "Transactions",
+      "subtitle": "Here you can add a new Transaction or view your previous Transactions."
+    },
+    "category": {
+      "title": "Categories",
+      "subtitle": "Here you can add new Categories or view existing Categories.",
+      "create": {
+        "title": "Create new Category",
+        "subtitle": "Here you can create a new Category.",
+        "form-name": "Name",
+        "form-description": "Description"
+      },
+      "edit": {
+        "title": "Edit Category",
+        "subtitle": "Here you can edit / update a Category.",
+        "form-name": "Name",
+        "form-description": "Description"
+      }
+    }
+  },
+  "month": {
+    "JANUARY": "January",
+    "FEBRUARY": "February",
+    "MARCH": "March",
+    "APRIL": "April",
+    "MAY": "May",
+    "JUNE": "June",
+    "JULY": "July",
+    "AUGUST": "August",
+    "SEPTEMBER": "September",
+    "OCTOBER": "October",
+    "NOVEMBER": "November",
+    "DECEMBER": "December"
+  }
+}

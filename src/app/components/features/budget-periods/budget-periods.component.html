@@ -1,16 +1,16 @@
-<app-title [title]="'Budget Period'"
-           [subtitle]="'Here you can add a new Budget Period or view your current Budget Period.'"/>
+<app-title [title]="'app.budget-period.title' | translate"
+           [subtitle]="'app.budget-period.subtitle' | translate"/>
 
-<button matButton="filled">New Budget Period</button>
+<button matButton="filled">{{ 'app.button.create' | translate }}</button>
 
 <div class="budget-period-container">
   @for (budgetPeriod of budgetPeriodList; track budgetPeriod.id) {
     <div class="budget-period">
-      <div><h3>{{ budgetPeriod.year }} {{ budgetPeriod.month }}</h3></div>
+      <div><h3>{{ budgetPeriod.year }} {{ 'month.' + budgetPeriod.month | translate }}</h3></div>
       <div class="align-right">{{ budgetPeriod.plannedAmount.currency }} {{ budgetPeriod.plannedAmount.amount }}</div>
       <div class="actions">
-        <button matButton="text">View details</button>
-        <button matButton="text">Edit</button>
+        <button matButton="text">{{ 'app.button.view-details' | translate }}</button>
+        <button matButton="text">{{ 'app.button.edit' | translate }}</button>
       </div>
     </div>
   }

@@ -6,6 +6,7 @@ import {MatFormField, MatLabel} from '@angular/material/form-field';
 import {MatInput} from '@angular/material/input';
 import {FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms';
 import {CategoryService} from '../../../../services/category.service';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-create-category',
@@ -16,7 +17,8 @@ import {CategoryService} from '../../../../services/category.service';
     MatFormField,
     MatLabel,
     MatInput,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslatePipe
   ],
   templateUrl: './create-category.component.html',
   styleUrl: './create-category.component.scss',

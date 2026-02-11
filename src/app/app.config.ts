@@ -2,7 +2,7 @@ import {ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChange
 import {provideRouter} from '@angular/router';
 
 import {routes} from './app.routes';
-import {provideHttpClient, withInterceptors} from '@angular/common/http';
+import {HttpClient, provideHttpClient, withInterceptors} from '@angular/common/http';
 import {
   AutoRefreshTokenService,
   createInterceptorCondition,
@@ -13,12 +13,23 @@ import {
   UserActivityService,
   withAutoRefreshToken
 } from 'keycloak-angular';
+import {provideTranslateService} from '@ngx-translate/core';
+import {provideTranslateHttpLoader} from '@ngx-translate/http-loader';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({eventCoalescing: true}),
     provideRouter(routes),
+    provideHttpClient(),
+    provideTranslateService({
+      loader: provideTranslateHttpLoader({
+        prefix: './i18n/',
+        suffix: '.json'
+      }),
+      fallbackLang: 'en',
+      lang: 'en'
+    }),
     provideHttpClient(withInterceptors([includeBearerTokenInterceptor])),
     provideKeycloak({
       config: {

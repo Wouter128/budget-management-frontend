@@ -4,28 +4,28 @@
      routerLink="/dashboard"
      routerLinkActive
      #rla1="routerLinkActive"
-     [activated]="rla1.isActive">Dashboard</a>
+     [activated]="rla1.isActive">{{ 'app.navbar.dashboard' | translate }}</a>
 
   <a mat-list-item
      disableRipple
      routerLink="/budget-periods"
      routerLinkActive
      #rla2="routerLinkActive"
-     [activated]="rla2.isActive">Budget Periods</a>
+     [activated]="rla2.isActive">{{ 'app.navbar.budget-period' | translate }}</a>
 
   <a mat-list-item
      disableRipple
      routerLink="/transactions"
      routerLinkActive
      #rla3="routerLinkActive"
-     [activated]="rla3.isActive">Transactions</a>
+     [activated]="rla3.isActive">{{ 'app.navbar.transaction' | translate }}</a>
 
   <a mat-list-item
      disableRipple
      routerLink="/categories"
      routerLinkActive
      #rla4="routerLinkActive"
-     [activated]="rla4.isActive">Categories</a>
+     [activated]="rla4.isActive">{{ 'app.navbar.category' | translate }}</a>
 
   <mat-divider></mat-divider>
 

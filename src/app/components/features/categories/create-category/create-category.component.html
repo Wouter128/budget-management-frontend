@@ -1,17 +1,17 @@
-<app-title [title]="'Create new Category'" [subtitle]="'Here you can create a new Category.'" />
+<app-title [title]="'app.category.create.title' | translate" [subtitle]="'app.category.create.subtitle' | translate"/>
 
 <form class="category-form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
   <mat-form-field appearance="outline">
-    <mat-label>Name</mat-label>
+    <mat-label>{{ 'app.category.create.form-name' | translate }}</mat-label>
     <input matInput formControlName="name">
   </mat-form-field>
   <mat-form-field appearance="outline">
-    <mat-label>Description</mat-label>
+    <mat-label>{{ 'app.category.create.form-description' | translate }}</mat-label>
     <textarea matInput formControlName="description"></textarea>
   </mat-form-field>
 
   <div class="button-container">
-    <button matButton="filled" type="submit">Create</button>
-    <button matButton="outlined" type="button" routerLink="/categories">Go back</button>
+    <button matButton="filled" type="submit">{{ 'app.button.create' | translate }}</button>
+    <button matButton="outlined" type="button" routerLink="/categories">{{ 'app.button.back' | translate }}</button>
   </div>
 </form>

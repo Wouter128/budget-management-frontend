@@ -1,17 +1,17 @@
-<app-title [title]="'Edit Category'" [subtitle]="'Here you can edit / update a Category.'" />
+<app-title [title]="'app.category.edit.title' | translate" [subtitle]="'app.category.edit.subtitle' | translate"/>
 
 <form class="category-form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
   <mat-form-field appearance="outline">
-    <mat-label>Name</mat-label>
+    <mat-label>{{ 'app.category.edit.form-name' | translate }}</mat-label>
     <input matInput formControlName="name">
   </mat-form-field>
   <mat-form-field appearance="outline">
-    <mat-label>Description</mat-label>
+    <mat-label>{{ 'app.category.edit.form-description' | translate }}</mat-label>
     <textarea matInput formControlName="description"></textarea>
   </mat-form-field>
 
   <div class="button-container">
-    <button matButton="filled" type="submit">Edit</button>
-    <button matButton="outlined" type="button" routerLink="/categories">Go back</button>
+    <button matButton="filled" type="submit">{{ 'app.button.edit' | translate }}</button>
+    <button matButton="outlined" type="button" routerLink="/categories">{{ 'app.button.back' | translate }}</button>
   </div>
 </form>
