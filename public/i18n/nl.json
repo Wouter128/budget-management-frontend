@@ -65,17 +65,17 @@
     }
   },
   "month": {
-    "JANUARY": "januari",
-    "FEBRUARY": "februari",
-    "MARCH": "maart",
-    "APRIL": "april",
-    "MAY": "mei",
-    "JUNE": "juni",
-    "JULY": "juli",
-    "AUGUST": "augustus",
-    "SEPTEMBER": "september",
-    "OCTOBER": "oktober",
-    "NOVEMBER": "november",
-    "DECEMBER": "december"
+    "01": "januari",
+    "02": "februari",
+    "03": "maart",
+    "04": "april",
+    "05": "mei",
+    "06": "juni",
+    "07": "juli",
+    "08": "augustus",
+    "09": "september",
+    "10": "oktober",
+    "11": "november",
+    "12": "december"
   }
 }

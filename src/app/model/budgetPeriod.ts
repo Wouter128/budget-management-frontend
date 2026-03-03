@@ -1,8 +1,6 @@
-import {Money} from './money';
-
 export interface BudgetPeriod {
   id: string;
-  year: number;
-  month: string;
-  plannedAmount: Money;
+  period: string;
+  plannedAmount: number;
+  locked: boolean;
 }

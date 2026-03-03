@@ -14,7 +14,7 @@ export class BudgetPeriodService {
   constructor(private http: HttpClient) {
   }
 
-  getBudgetPeriodList(): Observable<BudgetPeriod[]> {
+  getBudgetPeriods(): Observable<BudgetPeriod[]> {
     return this.http.get<BudgetPeriod[]>(this.url);
   }
 }

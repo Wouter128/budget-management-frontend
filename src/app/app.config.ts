@@ -2,7 +2,7 @@ import {ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChange
 import {provideRouter} from '@angular/router';
 
 import {routes} from './app.routes';
-import {HttpClient, provideHttpClient, withInterceptors} from '@angular/common/http';
+import {provideHttpClient, withInterceptors} from '@angular/common/http';
 import {
   AutoRefreshTokenService,
   createInterceptorCondition,
@@ -33,9 +33,9 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withInterceptors([includeBearerTokenInterceptor])),
     provideKeycloak({
       config: {
-        url: "http://localhost:8080",
-        realm: "budget-management",
-        clientId: "budget-management-angular-client"
+        url: "http://localhost:8081",
+        realm: "budget-mgmt",
+        clientId: "budget-mgmt-frontend"
       },
       initOptions: {
         onLoad: "check-sso",
@@ -54,7 +54,7 @@ export const appConfig: ApplicationConfig = {
           provide: INCLUDE_BEARER_TOKEN_INTERCEPTOR_CONFIG,
           useValue: [
             createInterceptorCondition<IncludeBearerTokenCondition>({
-              urlPattern: /^(http:\/\/localhost:8081)(\/.*)?$/i
+              urlPattern: /^(http:\/\/localhost:8080)(\/.*)?$/i
             })
           ]
         }

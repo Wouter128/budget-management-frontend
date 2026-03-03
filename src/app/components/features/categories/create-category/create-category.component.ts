@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {Router, RouterLink} from '@angular/router';
 import {TitleComponent} from '../../../common/title/title.component';
 import {MatButton} from '@angular/material/button';
@@ -7,6 +7,7 @@ import {MatInputModule} from '@angular/material/input';
 import {FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms';
 import {CategoryService} from '../../../../services/category.service';
 import {TranslatePipe} from '@ngx-translate/core';
+import {MatCheckbox} from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-create-category',
@@ -17,25 +18,28 @@ import {TranslatePipe} from '@ngx-translate/core';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    TranslatePipe
+    TranslatePipe,
+    MatCheckbox
   ],
   templateUrl: './create-category.component.html',
   styleUrl: './create-category.component.scss',
 })
 export class CreateCategoryComponent implements OnInit {
 
-  formGroup!: FormGroup;
+  formBuilder: FormBuilder = inject(FormBuilder);
 
-  constructor(private formBuilder: FormBuilder,
-              private categoryService: CategoryService,
+  formGroup = this.formBuilder.nonNullable.group({
+    name: '',
+    description: '',
+    itemized: false,
+    global: false
+  })
+
+  constructor(private categoryService: CategoryService,
               private router: Router) {
   }
 
   ngOnInit(): void {
-    this.formGroup = this.formBuilder.group({
-      name: '',
-      description: ''
-    });
   }
 
   onSubmit(): void {
@@ -43,7 +47,7 @@ export class CreateCategoryComponent implements OnInit {
   }
 
   createCategory(): void {
-    this.categoryService.createCategory(this.formGroup.value).subscribe({
+    this.categoryService.createCategory(this.formGroup.getRawValue()).subscribe({
       next: () => {
         console.log("Category created");
         this.formGroup.reset();

@@ -4,13 +4,17 @@
 <button matButton="filled">{{ 'app.button.create' | translate }}</button>
 
 <div class="budget-period-container">
-  @for (budgetPeriod of budgetPeriodList; track budgetPeriod.id) {
+  @for (budgetPeriod of budgetPeriods; track budgetPeriod.id) {
     <div class="budget-period">
-      <div><h3>{{ budgetPeriod.year }} {{ 'month.' + budgetPeriod.month | translate }}</h3></div>
-      <div class="align-right">{{ budgetPeriod.plannedAmount.currency }} {{ budgetPeriod.plannedAmount.amount }}</div>
+      <h3>
+        {{ 'month.' + budgetPeriod.period.substring(5, 7) | translate }}
+        {{ budgetPeriod.period.substring(0, 4) }}
+      </h3>
+      <p>[Locked: {{ budgetPeriod.locked }}]</p>
+      <p>{{ budgetPeriod.plannedAmount }} Euro</p>
       <div class="actions">
-        <button matButton="text">{{ 'app.button.view-details' | translate }}</button>
-        <button matButton="text">{{ 'app.button.edit' | translate }}</button>
+        <button matButton="elevated" >{{ 'app.button.view-details' | translate }}</button>
+        <button matButton="elevated">{{ 'app.button.edit' | translate }}</button>
       </div>
     </div>
   }

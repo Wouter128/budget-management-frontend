@@ -17,19 +17,19 @@ import {TranslatePipe} from '@ngx-translate/core';
 })
 export class BudgetPeriodsComponent implements OnInit {
 
-  public budgetPeriodList: BudgetPeriod[] | undefined;
+  public budgetPeriods: BudgetPeriod[] | undefined;
 
   constructor(private budgetPeriodService: BudgetPeriodService) {
   }
 
   ngOnInit(): void {
-    this.getBudgetPeriodList();
+    this.getBudgetPeriods();
   }
 
-  getBudgetPeriodList(): void {
-    this.budgetPeriodService.getBudgetPeriodList()
+  getBudgetPeriods(): void {
+    this.budgetPeriodService.getBudgetPeriods()
       .subscribe(result => {
-        this.budgetPeriodList = result;
+        this.budgetPeriods = result;
       })
   }
 }
