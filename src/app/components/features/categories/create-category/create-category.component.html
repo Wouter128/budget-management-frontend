@@ -9,10 +9,10 @@
     <mat-label>{{ 'app.category.create.form-description' | translate }}</mat-label>
     <textarea matInput formControlName="description"></textarea>
   </mat-form-field>
-  <mat-checkbox [checked]="true">
+  <mat-checkbox formControlName="itemized">
     Itemized
   </mat-checkbox>
-  <mat-checkbox [checked]="true">
+  <mat-checkbox formControlName="global">
     Global
   </mat-checkbox>
 

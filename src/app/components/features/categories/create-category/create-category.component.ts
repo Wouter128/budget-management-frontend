@@ -4,7 +4,7 @@ import {TitleComponent} from '../../../common/title/title.component';
 import {MatButton} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import {FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms';
+import {FormBuilder, ReactiveFormsModule} from '@angular/forms';
 import {CategoryService} from '../../../../services/category.service';
 import {TranslatePipe} from '@ngx-translate/core';
 import {MatCheckbox} from '@angular/material/checkbox';
@@ -26,18 +26,16 @@ import {MatCheckbox} from '@angular/material/checkbox';
 })
 export class CreateCategoryComponent implements OnInit {
 
-  formBuilder: FormBuilder = inject(FormBuilder);
+  private formBuilder: FormBuilder = inject(FormBuilder);
+  private categoryService: CategoryService = inject(CategoryService);
+  private router: Router = inject(Router);
 
   formGroup = this.formBuilder.nonNullable.group({
-    name: '',
-    description: '',
-    itemized: false,
-    global: false
+    name: [''],
+    description: [''],
+    itemized: [false],
+    global: [false]
   })
-
-  constructor(private categoryService: CategoryService,
-              private router: Router) {
-  }
 
   ngOnInit(): void {
   }

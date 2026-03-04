@@ -9,6 +9,12 @@
     <mat-label>{{ 'app.category.edit.form-description' | translate }}</mat-label>
     <textarea matInput formControlName="description"></textarea>
   </mat-form-field>
+  <mat-checkbox formControlName="itemized">
+    Itemized
+  </mat-checkbox>
+  <mat-checkbox formControlName="global">
+    Global
+  </mat-checkbox>
 
   <div class="button-container">
     <button matButton="filled" type="submit">{{ 'app.button.edit' | translate }}</button>

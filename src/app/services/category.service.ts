@@ -3,7 +3,7 @@ import {environment} from '../../environments/environment';
 import {HttpClient} from '@angular/common/http';
 import {Category} from '../model/category';
 import {Observable} from 'rxjs';
-import {CreateCategoryRequest} from '../model/CreateCategoryRequest';
+import {CategoryUpsertRequest} from '../model/CategoryUpsertRequest';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +15,7 @@ export class CategoryService {
   constructor(private http: HttpClient) {
   }
 
-  createCategory(category: CreateCategoryRequest): Observable<Category> {
+  createCategory(category: CategoryUpsertRequest): Observable<Category> {
     return this.http.post<Category>(`${this.url}/create`, category);
   }
 
@@ -31,7 +31,7 @@ export class CategoryService {
     return this.http.delete<void>(`${this.url}/${id}`);
   }
 
-  updateCategory(id: string, category: Category): Observable<Category> {
-    return this.http.patch<Category>(`${this.url}/edit/${id}`, category);
+  updateCategory(id: string, category: CategoryUpsertRequest): Observable<Category> {
+    return this.http.patch<Category>(`${this.url}/update/${id}`, category);
   }
 }
