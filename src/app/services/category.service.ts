@@ -32,6 +32,6 @@ export class CategoryService {
   }
 
   updateCategory(id: string, category: CategoryUpsertRequest): Observable<Category> {
-    return this.http.patch<Category>(`${this.url}/update/${id}`, category);
+    return this.http.put<Category>(`${this.url}/${id}`, category);
   }
 }

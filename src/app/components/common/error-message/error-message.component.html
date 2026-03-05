@@ -1,0 +1,9 @@
+@if (messages().length != 0) {
+  <div>
+    @for (message of messages(); track messages().indexOf(message)) {
+      <div animate.enter="enter-animation">
+        {{ message }}
+      </div>
+    }
+  </div>
+}
