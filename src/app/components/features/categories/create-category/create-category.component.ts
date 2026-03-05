@@ -10,6 +10,7 @@ import {TranslatePipe} from '@ngx-translate/core';
 import {MatCheckbox} from '@angular/material/checkbox';
 import {ErrorMessageComponent} from '../../../common/error-message/error-message.component';
 import {HttpErrorResponse} from '@angular/common/http';
+import {ValidationService} from '../../../../services/validation.service';
 
 @Component({
   selector: 'app-create-category',
@@ -32,6 +33,7 @@ export class CreateCategoryComponent implements OnInit {
   private formBuilder: FormBuilder = inject(FormBuilder);
   private categoryService: CategoryService = inject(CategoryService);
   private router: Router = inject(Router);
+  private validationService: ValidationService = inject(ValidationService);
 
   public errorMessages: string[] = [];
 
@@ -44,7 +46,7 @@ export class CreateCategoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.formGroup.valueChanges.subscribe(() => {
-      this.getValidationError();
+      this.errorMessages = this.validationService.getValidationError(this.formGroup);
     });
   }
 
@@ -68,26 +70,5 @@ export class CreateCategoryComponent implements OnInit {
     })
   }
 
-  getValidationError(): void {
-    console.log("clearing messages")
-    this.errorMessages = [];
-    const name = this.formGroup.get('name');
-    const description = this.formGroup.get('description');
 
-    if (name?.dirty && name.hasError('required')) {
-      this.errorMessages.push('Name is required');
-    }
-
-    if (name?.dirty && name.hasError('maxlength')) {
-      this.errorMessages.push('Name is too long');
-    }
-
-    if (description?.dirty && description.hasError('maxlength')) {
-      this.errorMessages.push('Description is too long')
-    }
-
-    if (this.formGroup.valid) {
-      this.errorMessages = [];
-    }
-  }
 }

@@ -5,13 +5,16 @@
     <mat-label>{{ 'app.category.create.form-name' | translate }}</mat-label>
     <input matInput formControlName="name">
   </mat-form-field>
+
   <mat-form-field appearance="outline">
     <mat-label>{{ 'app.category.create.form-description' | translate }}</mat-label>
     <textarea matInput formControlName="description"></textarea>
   </mat-form-field>
+
   <mat-checkbox formControlName="itemized">
     Itemized
   </mat-checkbox>
+
   <mat-checkbox formControlName="global">
     Global
   </mat-checkbox>
