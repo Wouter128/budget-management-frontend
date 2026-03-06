@@ -16,7 +16,9 @@
       "edit": "Edit",
       "remove": "Remove",
       "view-details": "View details",
-      "back": "Go back"
+      "back": "Go back",
+      "cancel": "Cancel",
+      "confirm": "Confirm"
     },
     "dashboard": {
       "title": "Dashboard",
@@ -62,20 +64,28 @@
         "form-name": "Name",
         "form-description": "Description"
       }
+    },
+    "confirm-dialog": {
+      "delete": {
+        "category": {
+          "title": "Delete Category",
+          "message": "You are about to delete a Category: "
+        }
+      }
     }
   },
   "month": {
-    "JANUARY": "January",
-    "FEBRUARY": "February",
-    "MARCH": "March",
-    "APRIL": "April",
-    "MAY": "May",
-    "JUNE": "June",
-    "JULY": "July",
-    "AUGUST": "August",
-    "SEPTEMBER": "September",
-    "OCTOBER": "October",
-    "NOVEMBER": "November",
-    "DECEMBER": "December"
+    "01": "January",
+    "02": "February",
+    "03": "March",
+    "04": "April",
+    "05": "May",
+    "06": "June",
+    "07": "July",
+    "08": "August",
+    "09": "September",
+    "10": "October",
+    "11": "November",
+    "12": "December"
   }
 }

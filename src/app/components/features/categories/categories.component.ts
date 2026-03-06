@@ -40,23 +40,20 @@ export class CategoriesComponent implements OnInit {
     );
   }
 
-  openDialog(enterAnimationDuration: string, exitAnimationDuration: string, subject: string, name: string, id: string): void {
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string, name: string, id: string): void {
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
       width: '250px',
       enterAnimationDuration,
       exitAnimationDuration,
       data: {
-        subject: subject,
         name: name
       }
     });
 
     dialogRef.afterClosed().subscribe(confirmed => {
       if (confirmed) {
-        console.log("Confirmed, ready to delete! (id: " + id + ")");
         this.deleteCategory(id);
       } else {
-        console.log("Canceled, not doing anything...");
       }
     })
   }

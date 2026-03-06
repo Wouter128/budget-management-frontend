@@ -8,10 +8,10 @@ import {
   MatDialogTitle
 } from '@angular/material/dialog';
 import {MatButton} from '@angular/material/button';
+import {TranslatePipe} from '@ngx-translate/core';
 
 interface ConfirmDialogData {
   name: string;
-  subject: string;
 }
 
 @Component({
@@ -21,7 +21,8 @@ interface ConfirmDialogData {
     MatDialogActions,
     MatDialogTitle,
     MatButton,
-    MatDialogClose
+    MatDialogClose,
+    TranslatePipe
   ],
   templateUrl: './confirm-dialog.component.html',
   styleUrl: './confirm-dialog.component.scss',

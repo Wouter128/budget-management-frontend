@@ -16,7 +16,9 @@
       "edit": "Wijzigen",
       "remove": "Verwijderen",
       "view-details": "Details bekijken",
-      "back": "Terugkeren"
+      "back": "Terugkeren",
+      "cancel": "Annuleren",
+      "confirm": "Bevestigen"
     },
     "dashboard": {
       "title": "Dashboard",
@@ -61,6 +63,14 @@
         "subtitle": "Hier kan je een Categorie wijzigen / updaten.",
         "form-name": "Naam",
         "form-description": "Beschrijving"
+      }
+    },
+    "confirm-dialog": {
+      "delete": {
+        "category": {
+          "title": "Category verwijderen",
+          "message": "Je staat op het punt om een Category te verwijderen: "
+        }
       }
     }
   },

@@ -1,8 +1,8 @@
-<h2 mat-dialog-title>Delete {{ data.subject }}</h2>
+<h2 mat-dialog-title>{{ 'app.confirm-dialog.delete.category.title' | translate }}</h2>
 <mat-dialog-content>
-  Would you like to delete {{ data.subject }} with name '{{ data.name }}'?
+  {{ 'app.confirm-dialog.delete.category.message' | translate }} '{{ data.name }}'?
 </mat-dialog-content>
 <mat-dialog-actions>
-  <button matButton mat-dialog-close (click)="cancel()">No</button>
-  <button matButton mat-dialog-close cdkFocusInitial (click)="confirm()">Ok</button>
+  <button matButton mat-dialog-close (click)="cancel()">{{ 'app.button.cancel' | translate }}</button>
+  <button matButton mat-dialog-close (click)="confirm()">{{ 'app.button.confirm' | translate }}</button>
 </mat-dialog-actions>
