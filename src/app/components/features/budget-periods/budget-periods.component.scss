@@ -1,7 +1,7 @@
 .budget-period-container {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 10px;
 }
 
@@ -9,6 +9,17 @@
   background-color: var(--mat-sys-primary-container);
   padding: 10px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.budget-period-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+  margin-bottom: 1rem;
 }
 
 .actions {

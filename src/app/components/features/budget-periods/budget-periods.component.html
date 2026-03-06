@@ -6,14 +6,18 @@
 <div class="budget-period-container">
   @for (budgetPeriod of budgetPeriods; track budgetPeriod.id) {
     <div class="budget-period">
-      <h3>
-        {{ 'month.' + budgetPeriod.period.substring(5, 7) | translate }}
-        {{ budgetPeriod.period.substring(0, 4) }}
-      </h3>
-      <p>[Locked: {{ budgetPeriod.locked }}]</p>
-      <p>{{ budgetPeriod.plannedAmount }} Euro</p>
+      <div>
+        <div class="budget-period-header">
+          <h3>
+            {{ 'month.' + budgetPeriod.period.substring(5, 7) | translate }}
+            {{ budgetPeriod.period.substring(0, 4) }}
+          </h3>
+          <p>[Locked: {{ budgetPeriod.locked }}]</p>
+        </div>
+        <div>{{ budgetPeriod.plannedAmount }} Euro</div>
+      </div>
       <div class="actions">
-        <button matButton="elevated" >{{ 'app.button.view-details' | translate }}</button>
+        <button matButton="elevated">{{ 'app.button.view-details' | translate }}</button>
         <button matButton="elevated">{{ 'app.button.edit' | translate }}</button>
       </div>
     </div>

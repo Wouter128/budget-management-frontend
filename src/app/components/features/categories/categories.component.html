@@ -3,7 +3,7 @@
 
 <button matButton="filled" routerLink="/create-category">{{ 'app.button.create' | translate }}</button>
 
-<div class="categories-container">
+<div class="category-container">
   @for (category of categories; track category.id) {
     <div class="category">
       <div>
