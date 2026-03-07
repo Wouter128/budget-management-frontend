@@ -1,11 +1,11 @@
 import {Component, inject, OnInit} from '@angular/core';
-import {TitleComponent} from '../../common/title/title.component';
+import {TitleComponent} from '../../../shared/components/common/title/title.component';
 import {MatButton} from '@angular/material/button';
 import {RouterLink} from '@angular/router';
-import {CategoryService} from '../../../services/category.service';
+import {CategoryService} from '../services/category.service';
 import {Category} from '../../../model/category';
 import {MatDialog} from '@angular/material/dialog';
-import {ConfirmDialogComponent} from '../../common/confirm-dialog/confirm-dialog.component';
+import {ConfirmDialogComponent} from '../../../shared/components/common/confirm-dialog/confirm-dialog.component';
 import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({

@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {BudgetPeriodService} from '../../../services/budget-period.service';
+import {BudgetPeriodService} from '../services/budget-period.service';
 import {BudgetPeriod} from '../../../model/budgetPeriod';
 import {MatButton} from '@angular/material/button';
-import {TitleComponent} from '../../common/title/title.component';
+import {TitleComponent} from '../../../shared/components/common/title/title.component';
 import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({

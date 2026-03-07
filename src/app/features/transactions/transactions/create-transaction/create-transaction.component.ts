@@ -4,14 +4,14 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {Router, RouterLink} from "@angular/router";
-import {TitleComponent} from "../../../common/title/title.component";
+import {TitleComponent} from "../../../../shared/components/common/title/title.component";
 import {TranslatePipe} from "@ngx-translate/core";
-import {TransactionService} from '../../../../services/transaction.service';
+import {TransactionService} from '../../services/transaction.service';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {provideNativeDateAdapter} from '@angular/material/core';
 import {DatePipe} from '@angular/common';
-import {CategoryService} from '../../../../services/category.service';
+import {CategoryService} from '../../../categories/services/category.service';
 import {Category} from '../../../../model/category';
 
 @Component({

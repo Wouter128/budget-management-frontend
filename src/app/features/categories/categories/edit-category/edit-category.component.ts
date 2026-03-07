@@ -1,15 +1,15 @@
 import {Component, inject, OnInit} from '@angular/core';
-import {CategoryService} from '../../../../services/category.service';
+import {CategoryService} from '../../services/category.service';
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {ActivatedRoute, Router, RouterLink} from '@angular/router';
 import {MatButton} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import {TitleComponent} from '../../../common/title/title.component';
+import {TitleComponent} from '../../../../shared/components/common/title/title.component';
 import {TranslatePipe} from '@ngx-translate/core';
 import {MatCheckbox} from '@angular/material/checkbox';
-import {ValidationService} from '../../../../services/validation.service';
-import {ErrorMessageComponent} from '../../../common/error-message/error-message.component';
+import {ValidationService} from '../../../../shared/services/validation.service';
+import {ErrorMessageComponent} from '../../../../shared/components/common/error-message/error-message.component';
 
 @Component({
   selector: 'app-edit-category',

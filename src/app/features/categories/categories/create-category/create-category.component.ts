@@ -1,16 +1,16 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {Router, RouterLink} from '@angular/router';
-import {TitleComponent} from '../../../common/title/title.component';
+import {TitleComponent} from '../../../../shared/components/common/title/title.component';
 import {MatButton} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
-import {CategoryService} from '../../../../services/category.service';
+import {CategoryService} from '../../services/category.service';
 import {TranslatePipe} from '@ngx-translate/core';
 import {MatCheckbox} from '@angular/material/checkbox';
-import {ErrorMessageComponent} from '../../../common/error-message/error-message.component';
+import {ErrorMessageComponent} from '../../../../shared/components/common/error-message/error-message.component';
 import {HttpErrorResponse} from '@angular/common/http';
-import {ValidationService} from '../../../../services/validation.service';
+import {ValidationService} from '../../../../shared/services/validation.service';
 
 @Component({
   selector: 'app-create-category',

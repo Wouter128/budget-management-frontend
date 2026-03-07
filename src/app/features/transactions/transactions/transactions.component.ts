@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {TitleComponent} from '../../common/title/title.component';
+import {TitleComponent} from '../../../shared/components/common/title/title.component';
 import {MatButtonModule} from '@angular/material/button';
 import {TranslatePipe} from '@ngx-translate/core';
 import {RouterLink} from '@angular/router';
 import {MatTableModule} from '@angular/material/table';
-import {TransactionService} from '../../../services/transaction.service';
+import {TransactionService} from '../services/transaction.service';
 import {Transaction} from '../../../model/Transaction';
 import {MatIconModule} from '@angular/material/icon';
 import {DecimalPipe} from '@angular/common';

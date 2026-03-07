@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
-import {environment} from '../../environments/environment';
+import {environment} from '../../../../environments/environment';
 import {HttpClient} from '@angular/common/http';
-import {Category} from '../model/category';
+import {Category} from '../../../model/category';
 import {Observable} from 'rxjs';
-import {CategoryUpsertRequest} from '../model/CategoryUpsertRequest';
+import {CategoryUpsertRequest} from '../../../model/CategoryUpsertRequest';
 
 @Injectable({
   providedIn: 'root',
