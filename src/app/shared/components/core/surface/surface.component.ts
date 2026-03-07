@@ -1,11 +1,8 @@
 import {Component, input} from '@angular/core';
-import {MatCard} from '@angular/material/card';
 
 @Component({
   selector: 'app-surface',
-  imports: [
-    MatCard
-  ],
+  imports: [],
   templateUrl: './surface.component.html',
   styleUrl: './surface.component.scss',
 })

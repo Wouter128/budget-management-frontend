@@ -1,12 +1,3 @@
-<app-title [title]="'app.dashboard.title' | translate" [subtitle]="'app.dashboard.subtitle' | translate"/>
-
-@if (isAuthenticated) {
-  <p>Hello {{ username }}</p>
-}
-
-<button matButton="filled" type="button" (click)="changeLang('en')">{{ 'app.language.en' | translate }}</button>
-<button matButton="filled" type="button" (click)="changeLang('nl')">{{ 'app.language.nl' | translate }}</button>
-
 <div class="card-container">
   @for (s of [1, 2, 3, 4, 5]; track s) {
     <app-surface>
@@ -15,9 +6,6 @@
       Wouter Biront<br/>
       Wouter Biront<br/>
       Wouter Biront<br/>
-      Wouter Biront<br/>
-      Wouter Biront<br/>
-      Wouter Biront
     </app-surface>
   }
 </div>

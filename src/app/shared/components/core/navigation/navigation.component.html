@@ -1,0 +1,43 @@
+<div class="navbar-left">
+  <button matButton="tonal"
+          type="button"
+          routerLink="/dashboard"
+          routerLinkActive
+          #rla1="routerLinkActive"
+          [class.active-link]="rla1.isActive">
+    {{ 'app.navbar.dashboard' | translate }}
+  </button>
+
+  <button matButton="tonal"
+          type="button"
+          routerLink="/budget-period"
+          routerLinkActive
+          #rla2="routerLinkActive"
+          [class.active-link]="rla2.isActive">
+    {{ 'app.navbar.budget-period' | translate }}
+  </button>
+
+  <button matButton="tonal"
+          type="button"
+          routerLink="/transaction"
+          routerLinkActive
+          #rla3="routerLinkActive"
+          [class.active-link]="rla3.isActive">
+    {{ 'app.navbar.transaction' | translate }}
+  </button>
+
+  <button matButton="tonal"
+          type="button"
+          routerLink="/category"
+          routerLinkActive
+          #rla4="routerLinkActive"
+          [class.active-link]="rla4.isActive">
+    {{ 'app.navbar.category' | translate }}
+  </button>
+</div>
+
+<div class="navbar-right">
+  <button matButton="filled" type="button" routerLink="/login">Login</button>
+  <button matButton="filled" type="button" (click)="changeLang('en')">{{ 'app.language.en' | translate }}</button>
+  <button matButton="filled" type="button" (click)="changeLang('nl')">{{ 'app.language.nl' | translate }}</button>
+</div>

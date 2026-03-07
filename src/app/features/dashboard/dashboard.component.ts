@@ -1,13 +1,9 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {TitleComponent} from '../../shared/components/common/title/title.component';
-import {BudgetPeriod} from '../../model/budgetPeriod';
-import {BudgetPeriodService} from '../budget-periods/services/budget-period.service';
-import Keycloak from 'keycloak-js';
 import {AuthService} from '../../shared/services/auth.service';
 import {MatButton} from '@angular/material/button';
 import {TranslatePipe, TranslateService} from '@ngx-translate/core';
-import {MatCard} from '@angular/material/card';
-import {SurfaceComponent} from '../../shared/ui/surface/surface.component';
+import {SurfaceComponent} from '../../shared/components/core/surface/surface.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,7 +11,6 @@ import {SurfaceComponent} from '../../shared/ui/surface/surface.component';
     TitleComponent,
     MatButton,
     TranslatePipe,
-    MatCard,
     SurfaceComponent
   ],
   templateUrl: './dashboard.component.html',

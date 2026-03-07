@@ -23,12 +23,12 @@ export const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'budget-periods',
+    path: 'budget-period',
     component: BudgetPeriodsComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'transactions',
+    path: 'transaction',
     component: TransactionsComponent,
     canActivate: [AuthGuard]
   },
@@ -38,7 +38,7 @@ export const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'categories',
+    path: 'category',
     component: CategoriesComponent,
     canActivate: [AuthGuard]
   },

@@ -1,15 +1,15 @@
 import {Component, signal} from '@angular/core';
-import {MatSidenav, MatSidenavContainer, MatSidenavContent} from '@angular/material/sidenav';
 import {RouterOutlet} from '@angular/router';
-import {SideNavComponent} from './shared/components/core/side-nav/side-nav.component';
 import {HeaderComponent} from './shared/components/core/header/header.component';
 import {FooterComponent} from './shared/components/core/footer/footer.component';
 import {TranslateService} from '@ngx-translate/core';
-import {SurfaceComponent} from './shared/ui/surface/surface.component';
+import {SurfaceComponent} from './shared/components/core/surface/surface.component';
+import {NavigationComponent} from './shared/components/core/navigation/navigation.component';
+import {MatDivider} from '@angular/material/list';
 
 @Component({
   selector: 'app-root',
-  imports: [MatSidenav, MatSidenavContainer, MatSidenavContent, RouterOutlet, SideNavComponent, HeaderComponent, FooterComponent, SurfaceComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, SurfaceComponent, NavigationComponent, MatDivider],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
