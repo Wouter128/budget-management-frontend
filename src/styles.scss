@@ -1,5 +1,26 @@
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+}
+
 body {
+  background-color: var(--app-background);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
   margin: 0;
-  font-family: Inter, system-ui, sans-serif;
+  font-family: var(--mat-sys-font-family);
+}
+
+.amount-positive {
+  color: var(--success-color);
+  font-weight: 600;
+}
+
+.amount-negative {
+  color: var(--danger-color);
+  font-weight: 600;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }

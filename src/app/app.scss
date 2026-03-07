@@ -1,25 +1,31 @@
-app-header {
-  border-bottom: 1px solid var(--mat-sys-outline-variant);
-  background-color: var(--mat-sys-primary);
-  margin-bottom: 20px;
-}
-
 :host {
-  display: flex;
-  flex-direction: column;
+  display: block;
   height: 100%;
 }
 
+.app-shell {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  gap: 20px;
+}
+
 .app-container {
-  flex: 1 1 auto;
+  flex: 1;
+  min-height: 0;
+  background: transparent;
 }
 
 mat-sidenav-content {
-  padding: 0 20px;
-  margin-right: 20px;
+  padding: 20px;
+  background: transparent;
 }
 
-app-footer {
-  background-color: var(--mat-sys-primary);
-  margin-top: 20px;
+mat-sidenav {
+  background: transparent;
 }

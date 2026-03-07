@@ -1,0 +1,27 @@
+.app-surface {
+  background: var(--card-background);
+
+  border-radius: 14px;
+  border: 1px solid var(--card-border);
+
+  box-shadow:
+    0 6px 20px rgba(0,0,0,0.35);
+  padding: 1em;
+}
+
+.hoverable {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.hoverable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.flat {
+  box-shadow: none;
+}

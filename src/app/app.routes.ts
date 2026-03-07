@@ -1,15 +1,15 @@
 import { Routes } from '@angular/router';
-import {DashboardComponent} from './components/features/dashboard/dashboard.component';
-import {BudgetPeriodsComponent} from './components/features/budget-periods/budget-periods.component';
-import {TransactionsComponent} from './components/features/transactions/transactions.component';
-import {CategoriesComponent} from './components/features/categories/categories.component';
-import {LoginComponent} from './components/core/login/login.component';
-import {CreateCategoryComponent} from './components/features/categories/create-category/create-category.component';
+import {DashboardComponent} from './features/dashboard/dashboard.component';
+import {BudgetPeriodsComponent} from './features/budget-periods/budget-periods/budget-periods.component';
+import {TransactionsComponent} from './features/transactions/transactions/transactions.component';
+import {CategoriesComponent} from './features/categories/categories/categories.component';
+import {LoginComponent} from './shared/components/core/login/login.component';
+import {CreateCategoryComponent} from './features/categories/categories/create-category/create-category.component';
 import {AuthGuard} from './guards/auth.guard';
-import {EditCategoryComponent} from './components/features/categories/edit-category/edit-category.component';
+import {EditCategoryComponent} from './features/categories/categories/edit-category/edit-category.component';
 import {
   CreateTransactionComponent
-} from './components/features/transactions/create-transaction/create-transaction.component';
+} from './features/transactions/transactions/create-transaction/create-transaction.component';
 
 export const routes: Routes = [
   {

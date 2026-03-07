@@ -1,15 +1,21 @@
-<app-header />
+<div class="app-shell">
+  <app-surface [padding]="false" [hoverable]="false">
+    <app-header/>
+  </app-surface>
 
-<mat-sidenav-container class="app-container">
-  <mat-sidenav mode="side" opened disableClose>
-    <app-side-nav />
-  </mat-sidenav>
+  <mat-sidenav-container class="app-container">
+    <mat-sidenav mode="side" opened disableClose>
+      <app-side-nav/>
+    </mat-sidenav>
 
-  <mat-sidenav-content>
-    <main class="app-content">
-      <router-outlet />
-    </main>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+    <mat-sidenav-content>
+      <main class="app-content">
+        <router-outlet/>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 
-<app-footer />
+  <app-surface [padding]="false" [hoverable]="false">
+    <app-footer/>
+  </app-surface>
+</div>
